@@ -1,0 +1,11 @@
+.panel.loading {
+  background: grey;
+}
+
+.panel.success {
+  background: green;
+}
+
+.panel.failure {
+  background: red;
+}
