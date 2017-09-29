@@ -113,7 +113,7 @@ class PanelList extends Component {
   loadEngagementApi() {
     const start = Date.now()
 
-    fetch('http://engagement.api.local.velaro.com/v1/test/ok')
+    fetch(this.props.engagementApiEndpoint)
       .then(() => {
         const end = Date.now()
         const panels = Object.assign({}, this.state.panels)
@@ -132,7 +132,7 @@ class PanelList extends Component {
   loadMainApi() {
     const start = Date.now()
 
-    fetch('http://main.api.local.velaro.com/v1/test/ok')
+    fetch(this.props.mainApiEndpoint)
       .then(() => {
         const end = Date.now()
         const panels = Object.assign({}, this.state.panels)
@@ -151,7 +151,7 @@ class PanelList extends Component {
   loadReportingApi() {
     const start = Date.now()
 
-    fetch('http://reporting.api.local.velaro.com/v1/test/ok')
+    fetch(this.props.reportingApiEndpoint)
       .then(() => {
         const end = Date.now()
         const panels = Object.assign({}, this.state.panels)
@@ -170,7 +170,7 @@ class PanelList extends Component {
   loadVisitorApi() {
     const start = Date.now()
 
-    fetch('http://visitor.api.local.velaro.com/v1/test/ok')
+    fetch(this.props.visitorApiEndpoint)
       .then(() => {
         const end = Date.now()
         const panels = Object.assign({}, this.state.panels)
@@ -189,7 +189,7 @@ class PanelList extends Component {
   loadCdn() {
     const start = Date.now()
 
-    fetch('http://cdn.local.velaro.com/bundles/velaro.inline.js')
+    fetch(this.props.cdnEndpoint)
       .then(() => {
         const end = Date.now()
         const panels = Object.assign({}, this.state.panels)
@@ -206,7 +206,7 @@ class PanelList extends Component {
   }
 
   loadEngagementHub() {
-    const connection = hubConnection('http://engagement.signalr.local.velaro.com')
+    const connection = hubConnection(this.props.engagementHubEndpoint)
     const start = Date.now()
 
     connection.start()
