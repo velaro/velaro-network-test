@@ -228,7 +228,7 @@ class PanelList extends Component {
   loadBandwidth() {
     const start = Date.now()
 
-    fetch(`/images/test.jpg?v=${Date.now()}`)
+    fetch(`images/test.jpg?v=${Date.now()}`)
       .then(response => response.blob())
       .then(blob => {
           const megabits = blob.size / 125000
