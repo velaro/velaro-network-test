@@ -3,3 +3,41 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.panel {
+  margin-bottom: 10px;
+  padding: 16px;
+  border-radius: 2px;
+}
+
+.panel.loading {
+  background: #eeeeee;
+}
+
+.panel.success {
+  background: #e5ffd4;
+}
+
+.panel.failure {
+  background: #ffe7e7;
+}
+
+.panel {
+  font-size: 12px;
+}
+
+.panel .title {
+  display: inline-block;
+  width: 130px;
+}
+
+.panel .description {
+  color: #7f7f7f;
+  margin-left: 20px;
+}
