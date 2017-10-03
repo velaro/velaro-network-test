@@ -17,6 +17,9 @@ const Home = () => (
       <li>
         <Link to="/enterprise">Enterprise</Link>
       </li>
+      <li>
+        <Link to="/enterprisestaging">Enterprise Staging</Link>
+      </li>
     </ul>
   </div>
 )
@@ -45,6 +48,18 @@ const Enterprise = () => (
   </div>
 )
 
+const EnterpriseStaging = () => (
+  <div>
+    <PanelList
+      engagementApiEndpoint="https://api-engagement-ent-stage.velaro.com/v1/test/ok"
+      mainApiEndpoint="https://api-main-ent-stage.velaro.com/v1/test/ok"
+      reportingApiEndpoint="https://api-reporting-ent-stage.velaro.com/v1/test/ok"
+      visitorApiEndpoint="https://api-reporting-ent-stage.velaro.com/v1/test/ok"
+      cdnEndpoint="https://cdn-ent-stage.velaro.com/bundles/velaro.inline.js"
+      engagementHubEndpoint="https://signalr-engagement-ent-stage.velaro.com" />
+  </div>
+)
+
 class App extends Component {
   render() {
     return (
@@ -56,6 +71,7 @@ class App extends Component {
               <Route exact path="/" component={Home}/>
               <Route path="/production" component={Production}/>
               <Route path="/enterprise" component={Enterprise}/>
+              <Route path="/enterprisestaging" component={EnterpriseStaging}/>
             </div>
           </Router>
         </div>
