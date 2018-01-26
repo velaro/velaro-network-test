@@ -15,10 +15,10 @@ const Home = () => (
         <Link to="/production">Production</Link>
       </li>
       <li>
-        <Link to="/enterprise">Enterprise</Link>
-      </li>
-      <li>
         <Link to="/enterprisestaging">Enterprise Staging</Link>
+      </li>
+	  <li>
+        <Link to="/corestaging">Core Staging</Link>
       </li>
     </ul>
   </div>
@@ -36,27 +36,27 @@ const Production = () => (
   </div>
 )
 
-const Enterprise = () => (
-  <div>
-    <PanelList
-      engagementApiEndpoint="https://api-engagement-ent.velaro.com/v1/test/ok"
-      mainApiEndpoint="https://api-main-ent.velaro.com/v1/test/ok"
-      reportingApiEndpoint="https://api-reporting-ent.velaro.com/v1/test/ok"
-      visitorApiEndpoint="https://api-visitor-ent.velaro.com/v1/test/ok"
-      cdnEndpoint="https://cdn-ent.velaro.com/bundles/velaro.inline.js"
-      engagementHubEndpoint="https://signalr-engagement-ent.velaro.com" />
-  </div>
-)
-
 const EnterpriseStaging = () => (
   <div>
     <PanelList
       engagementApiEndpoint="https://api-engagement-ent-stage.velaro.com/v1/test/ok"
       mainApiEndpoint="https://api-main-ent-stage.velaro.com/v1/test/ok"
       reportingApiEndpoint="https://api-reporting-ent-stage.velaro.com/v1/test/ok"
-      visitorApiEndpoint="https://api-reporting-ent-stage.velaro.com/v1/test/ok"
+      visitorApiEndpoint="https://api-visitor-ent-stage.velaro.com/v1/test/ok"
       cdnEndpoint="https://cdn-ent-stage.velaro.com/bundles/velaro.inline.js"
       engagementHubEndpoint="https://signalr-engagement-ent-stage.velaro.com" />
+  </div>
+)
+
+const CoreStaging = () => (
+  <div>
+    <PanelList
+      engagementApiEndpoint="https://api-engagement-staging.velaro.com/v1/test/ok"
+      mainApiEndpoint="https://api-main-staging.velaro.com/v1/test/ok"
+      reportingApiEndpoint="https://api-reporting-staging.velaro.com/v1/test/ok"
+      visitorApiEndpoint="https://api-visitor-staging.velaro.com/v1/test/ok"
+      cdnEndpoint="https://cdn-staging.velaro.com/bundles/velaro.inline.js"
+      engagementHubEndpoint="https://signalr-engagement-staging.velaro.com" />
   </div>
 )
 
@@ -70,8 +70,8 @@ class App extends Component {
             <div>
               <Route exact path="/" component={Home}/>
               <Route path="/production" component={Production}/>
-              <Route path="/enterprise" component={Enterprise}/>
               <Route path="/enterprisestaging" component={EnterpriseStaging}/>
+			  <Route path="/corestaging" component={CoreStaging}/>
             </div>
           </Router>
         </div>
