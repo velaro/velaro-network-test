@@ -205,24 +205,30 @@ class PanelList extends Component {
       })
   }
 
-  loadEngagementHub() {
+  async loadEngagementHub() {
     const connection = hubConnection(this.props.engagementHubEndpoint)
     const start = Date.now()
 
-    connection.start()
-      .done(() => {
-        const end = Date.now()
-        const panels = Object.assign({}, this.state.panels)
-        panels.engagementHub.description = `success (${end - start} ms)`
-        panels.engagementHub.status = PanelStatus.SUCCESS
-        this.setState({ panels: panels })
-      })
-      .fail(() => {
-        const panels = Object.assign({}, this.state.panels)
-        panels.engagementHub.description = 'failure'
-        panels.engagementHub.status = PanelStatus.FAILURE
-        this.setState({ panels: panels })
-      })
+    try {
+      await connection.start()
+      const proxy = connection.createHubProxy("EngagementHub")
+      const result = await proxy.invoke('test')
+
+      if(result !== 'success') {
+        throw new Error(`received an unexpected result: ${result}`)
+      }
+
+      const end = Date.now()
+      const panels = Object.assign({}, this.state.panels)
+      panels.engagementHub.description = `success (${end - start} ms)`
+      panels.engagementHub.status = PanelStatus.SUCCESS
+      this.setState({ panels: panels })
+    } catch(err) {
+      const panels = Object.assign({}, this.state.panels)
+      panels.engagementHub.description = err.toString()
+      panels.engagementHub.status = PanelStatus.FAILURE
+      this.setState({ panels: panels })
+    }
   }
 
   loadBandwidth() {
