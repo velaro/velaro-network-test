@@ -12,11 +12,6 @@ const PanelStatus = {
 class PanelList extends Component {
   state = {
     panels: {
-      ipAddress: {
-        title: 'IP Address',
-        description: 'testing',
-        status: PanelStatus.LOADING,
-      },
       userAgent: {
         title: 'User Agent',
         description: 'testing',
@@ -66,7 +61,6 @@ class PanelList extends Component {
   }
 
   componentDidMount() {
-    this.loadIpAddress()
     this.loadUserAgent()
     this.loadCookies()
     this.loadEngagementApi()
@@ -76,17 +70,6 @@ class PanelList extends Component {
     this.loadCdn()
     this.loadEngagementHub()
     this.loadBandwidth()
-  }
-
-  loadIpAddress() {
-    fetch('https://freegeoip.net/json/')
-      .then(response => response.json())
-      .then(json => {
-        const panels = Object.assign({}, this.state.panels)
-        panels.ipAddress.description = json.ip
-        panels.ipAddress.status = PanelStatus.SUCCESS
-        this.setState({ panels: panels })
-      })
   }
 
   loadUserAgent() {
