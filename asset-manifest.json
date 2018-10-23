@@ -1,6 +1,13 @@
 {
-  "main.css": "static/css/main.d2ed6e61.css",
-  "main.css.map": "static/css/main.d2ed6e61.css.map",
-  "main.js": "static/js/main.cfa98e9a.js",
-  "main.js.map": "static/js/main.cfa98e9a.js.map"
+  "main.css": "/velaro-network-test/static/css/main.be023f29.chunk.css",
+  "main.js": "/velaro-network-test/static/js/main.41873e7d.chunk.js",
+  "main.js.map": "/velaro-network-test/static/js/main.41873e7d.chunk.js.map",
+  "static/js/1.cb2cda12.chunk.js": "/velaro-network-test/static/js/1.cb2cda12.chunk.js",
+  "static/js/1.cb2cda12.chunk.js.map": "/velaro-network-test/static/js/1.cb2cda12.chunk.js.map",
+  "runtime~main.js": "/velaro-network-test/static/js/runtime~main.99d88c99.js",
+  "runtime~main.js.map": "/velaro-network-test/static/js/runtime~main.99d88c99.js.map",
+  "static/css/main.be023f29.chunk.css.map": "/velaro-network-test/static/css/main.be023f29.chunk.css.map",
+  "index.html": "/velaro-network-test/index.html",
+  "precache-manifest.4a03d092620e2bbd4d26a72296358538.js": "/velaro-network-test/precache-manifest.4a03d092620e2bbd4d26a72296358538.js",
+  "service-worker.js": "/velaro-network-test/service-worker.js"
 }
