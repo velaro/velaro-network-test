@@ -37,6 +37,10 @@ const Production = () => (
     <VisitorApiTest endpoint="https://api-visitor-us-east.velaro.com/v1/test/ok" />
     <CdnTest endpoint="https://eastprodcdn.azureedge.net/bundles/velaro.inline.js" />
     <EngagementHubTest
+      title="Engagement Hub"
+      endpoint="https://signalr-engagement-us-east.velaro.com"
+    />
+    {/* <EngagementHubTest
       title="Engagement Hub 1"
       endpoint="http://signalr-us-prod.eastus.cloudapp.azure.com"
     />
@@ -51,7 +55,7 @@ const Production = () => (
     <EngagementHubTest
       title="Engagement Hub 4"
       endpoint="http://signalrusprd4.eastus.cloudapp.azure.com"
-    />
+    /> */}
     <BandwidthTest />
   </div>
 );
