@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/velaro-network-test/static/js/runtime~main.99d88c99.js"
   },
   {
-    "revision": "6cb45b3edaab52894bcf",
-    "url": "/velaro-network-test/static/js/main.6cb45b3e.chunk.js"
+    "revision": "e6c04e88d2503fc7146b",
+    "url": "/velaro-network-test/static/js/main.e6c04e88.chunk.js"
   },
   {
     "revision": "cb2cda12dd8a8f9e384f",
     "url": "/velaro-network-test/static/js/1.cb2cda12.chunk.js"
   },
   {
-    "revision": "6cb45b3edaab52894bcf",
+    "revision": "e6c04e88d2503fc7146b",
     "url": "/velaro-network-test/static/css/main.be023f29.chunk.css"
   },
   {
-    "revision": "c64d51671a55cd0d013f234af9ed329b",
+    "revision": "c0b396ce04e91069d7afd917f277635a",
     "url": "/velaro-network-test/index.html"
   }
 ];
