@@ -5457,6 +5457,11 @@ jquery-param@0.2.0:
   resolved "https://registry.yarnpkg.com/jquery-param/-/jquery-param-0.2.0.tgz#55da8130428c50980eb516491c1b77cc78f0dcb1"
   integrity sha1-VdqBMEKMUJgOtRZJHBt3zHjw3LE=
 
+jquery@>=1.6.4, jquery@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
+  integrity sha512-Ubldcmxp5np52/ENotGxlLe6aGMvmF4R8S6tZjsP6Knsaxd/xp3Zrh50cG93lR6nPXyUFwzN3ZSOQI0wRJNdGg==
+
 js-levenshtein@^1.1.3:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/js-levenshtein/-/js-levenshtein-1.1.4.tgz#3a56e3cbf589ca0081eb22cd9ba0b1290a16d26e"
@@ -8619,6 +8624,13 @@ signalr-no-jquery@^0.1.8:
   dependencies:
     jquery-deferred "0.3.1"
     jquery-param "0.2.0"
+
+signalr@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/signalr/-/signalr-2.4.0.tgz#92af008e6b527ad4b36e94fbb340e135087a60d2"
+  integrity sha512-GPJHb3pcNk3IUui5/WG8lMuarEn+Vpc8wEvJ60w0KQ43W9FHnJcuNcF8dkZePr81eBslzicsRdyEunKNF7KjZQ==
+  dependencies:
+    jquery ">=1.6.4"
 
 simple-swizzle@^0.2.2:
   version "0.2.2"

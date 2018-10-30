@@ -1,6 +1,7 @@
+import $ from 'jquery/src/jquery';
+import 'signalr';
 import React, { Component } from 'react';
 import Panel from './Panel';
-import { hubConnection } from 'signalr-no-jquery';
 
 class EngagementHubTest extends Component {
   state = {
@@ -9,7 +10,7 @@ class EngagementHubTest extends Component {
   };
 
   async componentDidMount() {
-    const connection = hubConnection(this.props.endpoint);
+    const connection = $.hubConnection(this.props.endpoint);
     const start = Date.now();
 
     try {

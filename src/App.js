@@ -38,19 +38,19 @@ const Production = () => (
     <CdnTest endpoint="https://eastprodcdn.azureedge.net/bundles/velaro.inline.js" />
     <EngagementHubTest
       title="Engagement Hub 1"
-      endpoint="https://signalr-east-prod-1.velaro.com"
+      endpoint="https://signalr-east-prod-1.velaro.com/signalr"
     />
     <EngagementHubTest
       title="Engagement Hub 2"
-      endpoint="https://signalr-east-prod-2.velaro.com"
+      endpoint="https://signalr-east-prod-2.velaro.com/signalr"
     />
     <EngagementHubTest
       title="Engagement Hub 3"
-      endpoint="https://signalr-east-prod-3.velaro.com"
+      endpoint="https://signalr-east-prod-3.velaro.com/signalr"
     />
     <EngagementHubTest
       title="Engagement Hub 4"
-      endpoint="https://signalr-east-prod-4.velaro.com"
+      endpoint="https://signalr-east-prod-4.velaro.com/signalr"
     />
     <BandwidthTest />
   </div>
@@ -67,7 +67,7 @@ const EnterpriseStaging = () => (
     <CdnTest endpoint="https://cdn-ent-stage.velaro.com/bundles/velaro.inline.js" />
     <EngagementHubTest
       title="Engagement Hub"
-      endpoint="https://signalr-engagement-ent-stage.velaro.com"
+      endpoint="https://signalr-engagement-ent-stage.velaro.com/signalr"
     />
     <BandwidthTest />
   </div>
@@ -84,7 +84,7 @@ const CoreStaging = () => (
     <CdnTest endpoint="https://cdn-staging.velaro.com/bundles/velaro.inline.js" />
     <EngagementHubTest
       title="Engagement Hub"
-      endpoint="https://signalr-engagement-staging.velaro.com"
+      endpoint="https://signalr-engagement-staging.velaro.com/signalr"
     />
     <BandwidthTest />
   </div>
