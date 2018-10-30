@@ -19,7 +19,7 @@ class CookieTest extends Component {
     return (
       <Panel
         title="Cookies"
-        description={navigator.userAgent}
+        description={this.state.description}
         status="success"
       />
     );
