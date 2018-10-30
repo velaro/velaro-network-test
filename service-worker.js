@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/velaro-network-test/precache-manifest.630ff434f28fce57210af616322a7e0a.js"
+  "/velaro-network-test/precache-manifest.1dea6f311b45801d04cc253d8d22b19c.js"
 );
 
 workbox.clientsClaim();
